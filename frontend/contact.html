@@ -1,0 +1,806 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact us</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <style>
+ *{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html{
+	font-size: 10px;
+	font-family: "Roboto Cn", sans-serif;
+}
+
+a{
+	text-decoration: none;
+	color: #eee;
+}
+
+header{
+	width: 100%;
+	height: 100vh;
+	background: linear-gradient(to bottom, rgba(0,0,0,.8), rgba(0,0,0,.5)), url("https://your-space-assets.s3.ap-south-1.amazonaws.com/wp-content/uploads/2022/04/22094346/tiffin-services-in-ahmedabad.jpg") center no-repeat;
+	background-size: cover;
+	position: relative;
+  overflow: hidden;
+}
+
+.container{
+	max-width: 120rem;
+	width: 90%;
+	margin: 0 auto;
+}
+.logo image{
+  width: 500px;
+  height: 20px;
+
+}
+
+.menu-toggle{
+	position: fixed;
+	top: 2.5rem;
+	right: 2.5rem;
+	color: #eeeeee;
+	font-size: 3rem;
+	cursor: pointer;
+	z-index: 1000;
+	display: none;
+}
+
+nav{
+	padding-top: 5rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	text-transform: uppercase;
+	font-size: 1.6rem;
+}
+.brand{
+	font-size: 5rem;
+	font-weight: 300;
+	transform: translateX(-100rem);
+	animation: slideIn .5s forwards;
+	text-align: center;
+	color: #3120cf;
+}
+
+.brand span{
+	color: #ff5e14;
+}
+
+nav ul{
+	display: flex;
+}
+
+nav ul li{
+	list-style: none;
+	transform: translateX(100rem);
+	animation: slideIn .5s forwards;
+}
+
+nav ul li:nth-child(1){
+	animation-delay: 0s;
+}
+
+nav ul li:nth-child(2){
+	animation-delay: .5s;
+}
+
+nav ul li:nth-child(3){
+	animation-delay: 1s;
+}
+
+nav ul li:nth-child(4){
+	animation-delay: 1.5s;
+}
+
+nav ul li a{
+	padding: 1rem 0;
+	margin: 0 3rem;
+	position: relative;
+	letter-spacing: 2px;
+}
+
+nav ul li a:last-child{
+	margin-right: 0;
+}
+
+nav ul li a::before,
+nav ul li a::after{
+	content: '';
+	position: absolute;
+	width: 100%;
+	height: 2px;
+	background-color: #ff5e14;
+	left: 0;
+	transform: scaleX(0);
+	transition: all .5s;
+}
+
+nav ul li a::before{
+	top: 0;
+	transform-origin: left;
+}
+
+nav ul li a::after{
+	bottom: 0;
+	transform-origin: right;
+}
+
+.overlay{
+	background-color: rgba(0,0,0,.95);
+	position: fixed;
+	right: 0;
+	left: 0;
+	top: 0;
+	bottom: 0;
+	transition: opacity 650ms;
+	transform: scale(0);
+	opacity: 0;
+  display: none;
+}
+
+nav ul li a:hover::before,
+nav ul li a:hover::after{
+	transform: scaleX(1);
+}
+
+@keyframes slideIn {
+	from{
+
+	}
+	to{
+		transform: translateX(0);
+	}
+}
+
+@media screen and (max-width: 700px){
+
+	.menu-toggle{
+		display: block;
+	}
+
+	nav{
+		padding-top: 0;
+		display: none;
+		flex-direction: column;
+		justify-content: space-evenly;
+		align-items: center;
+		height: 100vh;
+		text-align: center;
+	}
+
+	nav ul{
+		flex-direction: column;
+	}
+
+	nav ul li{
+		margin-top: 5rem;
+	}
+
+	nav ul li a{
+		margin: 0;
+		font-size: 2.5rem;
+	}
+
+	.brand{
+		font-size: 5rem;
+	}
+  
+  .overlay.menu-open,
+  nav.menu-open{
+	  display: flex;
+	  transform: scale(1);
+	  opacity: 1;
+  }
+  
+}
+/* contact form      */
+
+* {
+	margin:0px;
+	padding:0px;
+}
+*, *:after, *:before { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing:border-box; -o-box-sizing:border-box; box-sizing: border-box; }
+
+.clearfix:before, .clearfix:after { display: table; content: ''; }
+.clearfix:after { clear: both; }
+
+
+body {
+	background: #ffffff;
+	color: #333;
+	font-weight: normal;
+	font-size: 1em;
+	font-family: 'Roboto', Arial, sans-serif;
+}
+
+input:focus, textarea:focus, keygen:focus, select:focus {
+	outline: none;
+	width:300px;
+}
+::-moz-placeholder {
+	color: #666;
+	font-weight: 300;
+	opacity: 1;
+}
+
+::-webkit-input-placeholder {
+	color: #666;
+	font-weight: 300;
+}
+
+
+/* Contact Form Styling */
+.container {
+	padding: 0 50px 70px;
+}
+.textcenter {
+	text-align: center;
+}
+.section1 {
+	text-align: center;
+	display: table;
+	width: 100%;
+}
+.section1 .shtext {
+	display: block;
+	margin-top: 20px;
+}
+.section1 .seperator {
+	border-bottom:1px solid #a2a2a2;
+	width: 35px;
+	display: inline-block;
+	margin: 20px;
+}
+
+.section1 h1 {
+	font-size: 40px;
+	color: #A44DD8;
+	font-weight: normal;
+}
+
+.section2 {
+    width: 1200px;
+    margin: 25px auto;
+}
+.section2 .col2 {
+	width: 48.71%;
+}
+.section2 .col2.first {
+	float: left;
+}
+.section2 .col2.last {
+	float: right;
+}
+.section2 .col2.column2 {
+	padding: 0 30px;
+}
+.section2 span.collig {
+	color: #a2a2a2;
+	margin-right: 10px;
+	display: inline-block;
+}
+.section2 .sec2addr {
+	display: block;
+	line-height: 26px;
+}
+.section2 .sec2addr p:first-child {
+	margin-bottom: 10px;
+}
+.section2 .sec2contactform input[type="text"], 
+.section2 .sec2contactform input[type="email"],
+.section2 .sec2contactform textarea {
+    padding: 18px;
+    border: 0;
+    background: #EDEDED;
+    margin: 7px 0;
+}
+.section2 .sec2contactform textarea {
+	width: 100%;
+	display: block;
+	color: #666;
+  resize:none;
+}
+.section2 .sec2contactform input[type="submit"] {
+	padding: 15px 40px;
+    color: #fff;
+    border: 0;
+    background: #A44DD8;
+    font-size: 16px;
+    text-transform: uppercase;
+    margin: 7px 0;
+    cursor: pointer;
+}
+.section2 .sec2contactform h3 {
+	font-weight: normal;
+    margin: 20px 0;
+    margin-top: 30px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 19px;
+    color: #A44DD8;
+}
+
+/* @media querries */
+
+@media only screen and (max-width: 1266px) {
+	.section2 {
+		width: 100%;
+	}
+}
+@media only screen and (max-width: 960px) {
+	.container {
+		padding: 0 30px 70px;
+	}
+	.section2 .col2 {
+		width: 100%;
+		display: block;
+	}
+	.section2 .col2.first {
+		margin-bottom: 10px;
+	}
+	.section2 .col2.column2 {
+		padding: 0;
+	}
+	body .sec2map {
+		height: 250px !important;
+	}
+}
+@media only screen and (max-width: 768px) {
+	.section2 .sec2addr {
+		font-size: 14px;
+	}
+	.section2 .sec2contactform h3 {
+		font-size: 16px;
+	}
+	.section2 .sec2contactform input[type="text"], .section2 .sec2contactform input[type="email"], .section2 .sec2contactform textarea {
+		padding: 10px;
+		margin:3px 0;
+	}
+	.section2 .sec2contactform input[type="submit"] {
+		padding: 10px 30px;
+		font-size: 14px;
+	}
+}
+@media only screen and (max-width: 420px) {
+	.section1 h1 {
+		font-size: 28px;
+	}	
+}
+/* footer */
+ul {
+    margin: 0px;
+    padding: 0px;
+}
+.footer-section {
+  background: #151414;
+  position: relative;
+}
+.footer-cta {
+  border-bottom: 1px solid #373636;
+}
+.single-cta i {
+  color: #ff5e14;
+  font-size: 30px;
+  float: left;
+  margin-top: 8px;
+}
+.cta-text {
+  padding-left: 15px;
+  display: inline-block;
+}
+.cta-text h4 {
+  color: #fff;
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 2px;
+}
+.cta-text span {
+  color: #757575;
+  font-size: 15px;
+}
+.footer-content {
+  position: relative;
+  z-index: 2;
+}
+.footer-pattern img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 330px;
+  background-size: cover;
+  background-position: 100% 100%;
+}
+.footer-logo {
+  margin-bottom: 30px;
+}
+.footer-logo img {
+    max-width: 200px;
+}
+.footer-text p {
+  margin-bottom: 14px;
+  font-size: 14px;
+      color: #7e7e7e;
+  line-height: 28px;
+}
+.footer-social-icon span {
+  color: #fff;
+  display: block;
+  font-size: 20px;
+  font-weight: 700;
+  font-family: 'Poppins', sans-serif;
+  margin-bottom: 20px;
+}
+.footer-social-icon a {
+  color: #fff;
+  font-size: 16px;
+  margin-right: 15px;
+}
+.footer-social-icon i {
+  height: 40px;
+  width: 40px;
+  text-align: center;
+  line-height: 38px;
+  border-radius: 50%;
+}
+.facebook-bg{
+  background: #3B5998;
+}
+.twitter-bg{
+  background: #55ACEE;
+}
+.google-bg{
+  background: #DD4B39;
+}
+.footer-widget-heading h3 {
+  color: #fff;
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 40px;
+  position: relative;
+}
+.footer-widget-heading h3::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -15px;
+  height: 2px;
+  width: 50px;
+  background: #ff5e14;
+}
+.footer-widget ul li {
+  display: inline-block;
+  /* float: left; */
+  width: 50%;
+  margin-bottom: 12px;
+}
+.footer-widget ul li a:hover{
+  color: #ff5e14;
+}
+.footer-widget ul li a {
+  color: #878787;
+  text-transform: capitalize;
+}
+.subscribe-form {
+  position: relative;
+  overflow: hidden;
+}
+.subscribe-form input {
+  width: 100%;
+  padding: 14px 28px;
+  background: #2E2E2E;
+  border: 1px solid #2E2E2E;
+  color: #fff;
+}
+.subscribe-form button {
+    position: absolute;
+    right: 0;
+    background: #ff5e14;
+    padding: 13px 20px;
+    border: 1px solid #ff5e14;
+    top: 0;
+}
+.subscribe-form button i {
+  color: #fff;
+  font-size: 22px;
+  transform: rotate(-6deg);
+}
+.copyright-area{
+  background: #202020;
+  padding: 25px 0;
+}
+.copyright-text p {
+  margin: 0;
+  font-size: 14px;
+  color: #878787;
+}
+.copyright-text p a{
+  color: #ff5e14;
+}
+.footer-menu li {
+  display: inline-block;
+  margin-left: 20px;
+}
+.footer-menu li:hover a{
+  color: #ff5e14;
+}
+.footer-menu li a {
+  font-size: 14px;
+  color: #878787;
+}
+
+    </style>
+</head>
+<body>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+<div class="full">
+<header>
+        <div class="menu-toggle" id="hamburger">
+            <i class="fas fa-bars"></i>
+        </div>
+        <div class="overlay"></div>
+        <div class="container">
+			<div>
+				<h1 class="brand">Apna<span>Tiffin</span>Service</h1>
+			</div>
+            <nav>
+                <div class="logo"><a href="home.html"><img src="AT (1).png" style="height: 200px;"></a></div>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Plan</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+					<li><a href="#">Feedback</a></li>
+                </ul>
+            </nav>
+        </div>
+</header>
+    <div class="container">
+		<div class="innerwrap">
+		
+			<section class="section1 clearfix">
+				<div class="textcenter">
+					<span class="shtext">Contact Us</span>
+					<span class="seperator"></span>
+					<h1>Drop Us a Mail</h1>
+				</div>
+			</section>
+		
+			<section class="section2 clearfix">
+				<div class="col2 column1 first">
+					<script src='https://maps.googleapis.com/maps/api/js?v=3.exp'></script><div style="overflow:hidden;width: 700px;position: relative;"><iframe width="620" height="440" src="https://maps.google.com/maps?width=700&amp;height=440&amp;hl=en&amp;q=Landmark%2C%20206%2C%202nd%20Floor%2C%20Fortune%20Aura%20Business%20park%20(%20Kyro%20Building%201%2C%20Gurmeet%20Nagar%2C%20Bhawarkua%20Main%20Rd%2C%20above%20Nexa%20Car%20Showroom%2C%20near%20Apple%20hospital%2C%20Indore%2C%20Madhya%20Pradesh%20452014%2C%20India+(livewire)&amp;ie=UTF8&amp;t=&amp;z=11&amp;iwloc=B&amp;output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><div style="position: absolute;width: 80%;bottom: 10px;left: 0;right: 0;margin-left: auto;margin-right: auto;color: #000;text-align: center;"><small style="line-height: 1.8;font-size: 2px;background: #fff;">Powered by <a href="https://embedgooglemaps.com/">Embed Google Maps</a> & <a href="https://spindelharpan.nu/">spindelharpan gratisspela</a></small></div><style>#gmap_canvas img{max-width:none!important;background:none!important}</style></div><br />
+				</div>
+				<div class="col2 column2 last">
+					<div class="sec2innercont">
+						<div class="sec2addr">
+							<p>LIVEWIRE INDORE
+                             Landmark, 206, 2nd Floor, Fortune Aura Business park ( Kyro Building 1, Gurmeet Nagar, Bhawarkua Main Rd, above Nexa Car Showroom, near Apple hospital, Indore, Madhya Pradesh 452014</p>
+							<p><span class="collig">Phone :</span> +91 7898684731 / 8770017228</p>
+							<p><span class="collig">Email :</span> maazkhokhar11@gmail.com</p>
+							
+						</div>
+					</div>
+					<div class="sec2contactform">
+						<h3 class="sec2frmtitle">Want to Know More?? Drop Us a Mail</h3>
+						
+							<!-- <form method="post">
+								{%csrf_token%}
+								
+								
+								<div class="row mt-4">
+									<div class="col">
+										<input type="text" name="firstname" class="form-control" placeholder="First Name">
+									</div>
+								</div>
+								<div class="row mt-4">
+									<div class="col">
+										<input type="text" name="lastname" class="form-control" placeholder="Last Name">
+									</div>
+								</div>
+					
+								<div class="row mt-4">
+									<div class="col">
+										<textarea class="form-control" name="description" rows="3" placeholder="Description?"></textarea>
+									</div>
+								</div>
+								<div class="row mt-4">
+									<div class="col">
+										<input type="text" name="contact" class="form-control" placeholder="Contact No.">
+									</div>
+								</div>
+								<div class="row mt-4">
+									<div class="col">
+										<input type="email" name="email" class="form-control" placeholder="Email">
+									</div>
+								</div>
+							   
+								
+								<div class="row mt-4">
+									<div class="col text-center">
+										<button  class="btn btn-primary">SUBMIT<span style="color: red;">T</span></button>
+									</div>
+								</div>
+								
+							 
+							    {{form.as_p}}
+								<button type="submit" name="savecontact">submit</button>
+					
+							</form>
+							</div>
+							</div> -->
+						   
+							<form method="post">
+								{%csrf_token%}
+							 <div class="clearfix">
+								<input class="col2 first" type="text" name="firstname" placeholder="FirstName">
+								<input class="col2 last" type="text" name="lastname" placeholder="LastName">
+							</div>
+							<div class="clearfix">
+								<input  class="col2 first" type="Email" name="email" placeholder="Email">
+								<input class="col2 last" type="text" name="contact"placeholder="Contact Number">
+							</div>
+							<div class="clearfix">
+								<textarea name="description" id="" cols="30" rows="7">Your message here...</textarea>
+							</div>
+							<div class="clearfix"><button type="submit" name="savecontact" >Send</button></div>
+						</form> -->
+					
+
+				</div>
+			</section>
+		
+		</div>
+	</div>
+	<footer class="footer-section">
+		<div class="container">
+			<div class="footer-cta pt-5 pb-5">
+				<div class="row">
+					<div class="col-xl-4 col-md-4 mb-30">
+						<div class="single-cta">
+							<i class="fas fa-map-marker-alt"></i>
+							<div class="cta-text">
+								<h4>Find us</h4>
+								<span>Fortune Aura Building Bhawarkua Main Rd, Indore, Madhya Pradesh 452001</span>
+							</div>
+						</div>
+					</div>
+					<div class="col-xl-4 col-md-4 mb-30">
+						<div class="single-cta">
+							<i class="fas fa-phone"></i>
+							<div class="cta-text">
+								<h4>Call us</h4>
+								<span>+91- 7898684731/8770017228</span>
+							</div>
+						</div>
+					</div>
+					<div class="col-xl-4 col-md-4 mb-30">
+						<div class="single-cta">
+							<i class="far fa-envelope-open"></i>
+							<div class="cta-text">
+								<h4>Mail us</h4>
+								<span>apnatiffinservice@gmail.com</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="footer-content pt-5 pb-5">
+				<div class="row">
+					<div class="col-xl-4 col-lg-4 mb-50">
+						<div class="footer-widget">
+							<div class="footer-logo">
+								<a href="home.html"><img src="AT (1).png" class="img-fluid" alt="logo"></a>
+							</div>
+							<div class="footer-text">
+								<p>Eating healthy food fills
+									your body with energy and
+									nutrients.Imagine your 
+									cells smiling back at you
+									and saying:-"Thank you!"
+								</p>
+							</div>
+							<div class="footer-social-icon">
+								<span>Follow us</span>
+								<a href="#"><i class="fab fa-facebook-f facebook-bg"></i></a>
+								<a href="#"><i class="fab fa-twitter twitter-bg"></i></a>
+								<a href="#"><i class="fab fa-google-plus-g google-bg"></i></a>
+							</div>
+						</div>
+					</div>
+					<div class="col-xl-4 col-lg-4 col-md-6 mb-30">
+						<div class="footer-widget">
+							<div class="footer-widget-heading">
+								<h3>Useful Links</h3>
+							</div>
+							<ul>
+								<li><a href="#">Home</a></li>
+								<li><a href="#">about</a></li>
+								<li><a href="#">services</a></li>
+								<li><a href="#">portfolio</a></li>
+								<li><a href="#">Contact</a></li>
+								<li><a href="#">About us</a></li>
+								<li><a href="#">Our Services</a></li>
+								<li><a href="#">Expert Team</a></li>
+								<li><a href="#">Contact us</a></li>
+								<li><a href="#">Latest News</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-xl-4 col-lg-4 col-md-6 mb-50">
+						<div class="footer-widget">
+							<div class="footer-widget-heading">
+								<h3>Subscribe</h3>
+							</div>
+							<div class="footer-text mb-25">
+								<p>Don’t miss to subscribe to our new feeds, kindly fill the form below.</p>
+							</div>
+							<div class="subscribe-form">
+								<form action="#">
+									<input type="text" placeholder="Email Address">
+									<button><i class="fab fa-telegram-plane"></i></button>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="copyright-area">
+			<div class="container">
+				<div class="row">
+					<div class="col-xl-6 col-lg-6 text-center text-lg-left">
+						<div class="copyright-text">
+							<p>Copyright &copy; 2022, All Right Reserved <a href="">apnatiffinservice</a></p>
+						</div>
+					</div>
+					<div class="col-xl-6 col-lg-6 d-none d-lg-block text-right">
+						<div class="footer-menu">
+							<ul>
+								<li><a href="#">Home</a></li>
+								<li><a href="#">Terms</a></li>
+								<li><a href="#">Privacy</a></li>
+								<li><a href="#">Policy</a></li>
+								<li><a href="#">Contact</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+	</div>
+	<script>
+		var open = document.getElementById('hamburger');
+	  var changeIcon = true;
+	  
+	  open.addEventListener("click", function(){
+	  
+		  var overlay = document.querySelector('.overlay');
+		  var nav = document.querySelector('nav');
+		  var icon = document.querySelector('.menu-toggle i');
+	  
+		  overlay.classList.toggle("menu-open");
+		  nav.classList.toggle("menu-open");
+	  
+		  if (changeIcon) {
+			  icon.classList.remove("fa-bars");
+			  icon.classList.add("fa-times");
+	  
+			  changeIcon = false;
+		  }
+		  else {
+			  icon.classList.remove("fa-times");
+			  icon.classList.add("fa-bars");
+			  changeIcon = true;
+		  }
+	  });
+	  </script>
+</body>
+</html>
